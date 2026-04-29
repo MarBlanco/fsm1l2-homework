@@ -1,0 +1,223 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    --color-primario: hsl(220, 80%, 50%);
+    --color-primario-claro: hsl(220, 80%, 70%);
+    --color-primario-oscuro: hsl(220, 80%, 30%);
+
+    --color-texto:hsl(0, 0%, 20%);
+    --color-fondo:hsl(0,0%, 95%);
+}
+
+/* BASE */
+html{
+    font-size: 100%;
+}
+
+body{
+    font-family: "Roboto", system-ui, -apple-system, sans-serif;
+    font-size: 1rem;  /* 16px*/
+    line-height: 1.5;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* HEADER */
+.header{
+    background-color: var(--color-primario);
+    padding: 2rem 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-contenido{
+    max-width: 75rem;
+    margin: 0 auto;
+    text-align: center;    
+    padding: 0 1rem;
+}
+
+.titulo-principal{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-fondo);
+}
+
+.descripcion{
+    font-size: 1.1rem;
+    color: var(--color-primario-claro);
+}
+
+/* GALERIA CON GRID*/
+.contenedor{
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 2rem 1rem; 
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* ACOMODAR TARJETAS */
+.foto-tarjeta{
+    background-color:white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.foto-tarjeta img{
+    width: 100%;
+    height: 250px;
+    object-fit:cover;
+    display: block;
+}
+
+.foto-info{
+    padding: 1rem;
+}
+
+.foto-titulo{
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-texto);
+}
+
+.foto-descripcion{
+    font-size: 0.9rem;
+    color: var(--color-primario-oscuro);
+    margin: 0;
+}
+
+/* EFECTO HOVER */
+.foto-tarjeta:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* FOOTER */
+/* estilizar el footer */
+.footer{
+    background-color: var(--color-primario-oscuro);
+    color: var(--color-primario-claro);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* MEDIA QUERY RESPONSIVE */
+/* TODO: tablets y columnas */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .titulo-principal{
+        font-size: 2rem;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .galeria{
+        grid-template-columns: 1fr;
+    }
+    .titulo-principal{
+        font-size: 1.6rem;
+    }
+    .contenedor{
+        padding: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * INVESTIGACIÓN: ¿Qué es HSL y por qué usarlo?
+ *
+ * 1. ¿Qué significa cada valor en hsl()?
+ *    - H (Hue): Es el color base en grados (0 a 360).
+ *      Ej: 0 = rojo, 120 = verde, 240 = azul.
+ *
+ *    - S (Saturation): Es la intensidad del color (0% a 100%).
+ *      0% = gris (sin color), 100% = color puro.
+ *
+ *    - L (Lightness): Es la luminosidad (0% a 100%).
+ *      0% = negro, 50% = color normal, 100% = blanco.
+ *
+ * 2. ¿Por qué HSL puede ser más útil que HEX o RGB?
+ *    - Permite modificar fácilmente el brillo (Lightness) para crear variantes claras u oscuras.
+ *    - Es más intuitivo para diseñar paletas manteniendo el mismo color base (Hue).
+ *
+ * 3. Ejemplo práctico:
+ *    - Para un botón, puedo usar un color base y crear hover más claro u oscuro
+ *      cambiando solo el Lightness sin tocar el resto del color.
+ */
+
+
+
+
+
+
+
+
