@@ -2,8 +2,8 @@
 Web donde se practica flexbox y grid a traves de tarjetas
 
 ## Tecnologias
--CSS
 -HTML
+-CSS
 
 ## Como usar
 Abrir index.html en el navegador
